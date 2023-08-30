@@ -1,0 +1,7 @@
+{
+  "name": "relevamientoKinetico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

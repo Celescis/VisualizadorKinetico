@@ -1,0 +1,97 @@
+//FONDO
+ion-content {
+  --background: none
+}
+
+.contenedor {
+  background-color: #c9d6fe;
+  background-image: url('/assets/background/splashback.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//TEXTO
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.header-text {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.text-container {
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text2-container {
+  transform: translateY(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+//ICONO
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.contenedor-imagen {
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+	-webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+	        animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+}
+
+.contenedor-imagen img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  max-height: 70%;
+  margin: auto;
+}

@@ -1,0 +1,225 @@
+// MENU PRINCIPAL
+ion-content {
+  --background: radial-gradient(circle at 50% -6.76%, #a9daca 0, #a5dbcf 3.33%, #a2dbd4 6.67%, #a0dbd9 10%, #9fdade 13.33%, #9fdae3 16.67%, #a0d9e7 20%, #a2d8eb 23.33%, #a6d7ee 26.67%, #aad6f0 30%, #aed5f2 33.33%, #b4d4f4 36.67%, #bad2f4 40%, #c0d0f4 43.33%, #c7cff3 46.67%, #cdcdf2 50%, #d3cbf0 53.33%, #d9caed 56.67%, #dfc8ea 60%, #e4c7e6 63.33%, #e9c6e2 66.67%, #edc5dd 70%, #f1c4d8 73.33%, #f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+  position: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.cosas-lindas-btn {
+  flex-direction: column;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #4aa951;
+  border-radius: 20px;
+  border: 5px outset;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50vh;
+  box-shadow: 0px 0px 25px #326914, 0px 0px 25px #326914, 0px 0px 25px #326914;
+}
+
+.cosas-lindas-btn:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0px 0px 25px #c3ffb4, 0px 0px 25px #c3ffb4, 0px 0px 25px #c3ffb4;
+}
+
+.cosas-feas-btn {
+  flex-direction: column;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #da2235;
+  border-radius: 20px;
+  border: 5px outset;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50vh;
+  box-shadow: 0px 0px 25px #7b1717, 0px 0px 25px #7b1717, 0px 0px 25px #7b1717;
+}
+
+.cosas-feas-btn:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0px 0px 25px #ff3232, 0px 0px 25px #ff3232, 0px 0px 25px #ff3232;
+}
+
+.title-wrapper {
+  margin-bottom: 10px;
+}
+.cosas-lindas-btn h2,
+.cosas-feas-btn h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+
+.imagen-boton {
+  margin-bottom: 10px;
+}
+.imagen-boton img {
+  width: 150px;
+  height: 150px;
+}
+
+.h1menu {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+// MENU COSAS LINDAS Y FEAS
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 10px;
+  /* añade padding si es necesario */
+}
+
+.segHome {
+  --background: #b6dcfc80;
+  width: 100%;
+  display: flex;
+}
+
+.expanded-button {
+  flex-grow: 1;
+}
+
+.expanded-button:active {
+  box-shadow: 0px 0px 25px #c3ffb4, 0px 0px 25px #c3ffb4, 0px 0px 25px #c3ffb4;
+}
+
+.segMenu {
+  --background: #b2cbfd8f;
+}
+
+ion-segment:active {
+  filter: drop-shadow(2px 2px 4px rgba(68, 255, 0, 0.631));
+}
+
+.grafico {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.511);
+  color: #ffffff;
+  border-style: outset;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+// LISTADO COSAS LINDAS y FEAS
+.img-cosas-lindas {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.btn-like-dislike-cl {
+  --background: transparent;
+
+  ion-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 40%;
+  }
+}
+
+.like-activado {
+  color: rgb(1, 143, 1);
+}
+
+// PIPE Y BAR CHART
+
+.pipe-chart-container,
+.bar-chart-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 50vh !important;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+//SPINNER
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.custom-spinner img {
+  animation: rotate-center 1s ease-in-out infinite both;
+  max-width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.custom-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(91, 91, 91, 0.601);
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: center;
+}
+
+.spinnerh1 {
+  font-family: 'Yomogi', cursive;
+  position: absolute;
+  top: 200px;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+//goodbye
+ion-loading {
+  --inner-padding: 0;
+  --spinner-margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gifbye {
+  width: 200px;
+}
